@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Productivity Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo">
+          <i class="fas fa-tasks"></i>
+          <h1>ProductivityPro</h1>
+        </div>
+        <div class="user-profile">
+          <img
+            src="https://ui-avatars.com/api/?name=John+Doe&background=4361ee&color=fff"
+            alt="User"
+          />
+          <span>John Doe</span>
+        </div>
+      </header>
+
+      <div class="task-form">
+        <input
+          type="text"
+          id="taskInput"
+          placeholder="Enter a new task..."
+          autofocus
+        />
+        <button class="btn btn-primary" id="addTaskBtn">
+          <i class="fas fa-plus"></i> Add Task
+        </button>
+      </div>
+
+      <div class="task-status-tabs">
+        <div class="tab active" data-status="all">All Tasks</div>
+        <div class="tab" data-status="not-started">Not Started</div>
+        <div class="tab" data-status="in-progress">In Progress</div>
+        <div class="tab" data-status="completed">Completed</div>
+      </div>
+
+      <div class="task-columns">
+        <div class="task-column">
+          <div class="column-header">
+            <div class="column-title">Not Started</div>
+            <div class="task-count" id="notStartedCount">0</div>
+          </div>
+          <div class="task-list" id="notStartedList">
+            <div class="empty-state">
+              <i class="far fa-folder-open"></i>
+              <p>No tasks here yet</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="task-column">
+          <div class="column-header">
+            <div class="column-title">In Progress</div>
+            <div class="task-count" id="inProgressCount">0</div>
+          </div>
+          <div class="task-list" id="inProgressList">
+            <div class="empty-state">
+              <i class="far fa-hourglass"></i>
+              <p>No tasks in progress</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="task-column">
+          <div class="column-header">
+            <div class="column-title">Completed</div>
+            <div class="task-count" id="completedCount">0</div>
+          </div>
+          <div class="task-list" id="completedList">
+            <div class="empty-state">
+              <i class="far fa-check-circle"></i>
+              <p>No completed tasks</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
